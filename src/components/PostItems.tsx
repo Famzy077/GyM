@@ -1,5 +1,5 @@
 import { Post } from '../types/Post';
-
+// import Image from 'next/image';
 interface PostItemProps {
   post: Post;
   deletePost: (id: string) => void;

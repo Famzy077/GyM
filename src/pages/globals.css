@@ -13,3 +13,6 @@
     --foreground: #ededed;
   }
 }
+body{
+  background-color: var(--foreground);
+}

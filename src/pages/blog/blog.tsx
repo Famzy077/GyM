@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import PostForm from '../components/PostForm';
-import PostList from '../components/PostList';
-import { Post } from '../types/Post';
-import { supabase } from '../utils/supabaseClient';
+import PostForm from '../../components/PostForm'
+import PostList from '../../components/PostList';
+import { Post } from '../../types/Post';
+import { supabase } from '../../utils/supabaseClient';
 
-const HomePage: React.FC = () => {
+const Blog: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
 
   // Fetch posts from Supabase on page load
@@ -56,4 +56,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default Blog;
