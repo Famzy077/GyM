@@ -13,3 +13,17 @@
     --foreground: #ededed;
   }
 }
+
+.mainSection{
+  background-image: url('../public/images/home-bg-image.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: -10px;
+  height: 96vh;
+  width: 100%;
+}
+.mainSectionContent{
+  background-color: rgba(0, 0, 0, 0.24);
+  height: 96vh;
+}

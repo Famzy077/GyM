@@ -1,14 +1,13 @@
 "use client"
 import React from 'react'
-import './index.css'
 import Index from './pages/index'
+import { ThemeProvider } from '@material-tailwind/react'
 
 const Home = () => {
   return (
-    <>
-      <h1>Hello World</h1>
-      <Index/>
-    </>
+    <ThemeProvider>
+      <Index />
+    </ThemeProvider>
   )
 }
 

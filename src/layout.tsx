@@ -1,5 +1,4 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import '../globals.css'; // Ensure the global styles are imported
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,19 +10,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Remove the metadata export
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
+    <main>
+      <section
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-      </body>
-    </html>
+      </section>
+    </main>
   );
 }
