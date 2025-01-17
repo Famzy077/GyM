@@ -18,7 +18,7 @@ const Index = () => {
         </header>
 
         <section>
-            
+            <h2>Welcome To Gym House</h2>
         </section>
     </div>
   )

@@ -1,11 +1,14 @@
 "use client"
 import React from 'react'
-// import Index from './pages/index'
+import './index.css'
 import Index from './pages/index'
 
 const Home = () => {
   return (
-    <Index/>
+    <>
+      <h1>Hello World</h1>
+      <Index/>
+    </>
   )
 }
 
