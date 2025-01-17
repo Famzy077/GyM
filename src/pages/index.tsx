@@ -20,6 +20,8 @@ const Index = () => {
         <section>
             <h2>Welcome To Gym House</h2>
         </section>
+        
+      <h1>Hello World</h1>
     </div>
   )
 }
