@@ -14,19 +14,65 @@
   }
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  contain: layout;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
 .mainSection{
   background-image: url('../public/images/home-bg-image.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-position-y: -10px;
-  height: 96vh;
+  height: 100vh;
   width: 100%;
 }
 .mainSectionContent{
   background-color: rgba(0, 0, 0, 0.24);
-  height: 96vh;
+  height: 100vh;
 }
-.header.scrollheader{
-  background-color: rgba(0, 0, 255, 0.836);
+.header{
+  position: -webkit-sticky; /* For Safari */
+  /* position: fixed;
+  top: 0; */
+  width: 100%;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+  z-index: 100; 
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  display: flex;
+  animation: marquee 23s linear infinite;
+  overflow: hidden;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+/* Section 2*/
+.section2{
+  background-color: rgba(2, 2, 2, 0.849);
+}
+.sectionBox{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  padding: 20px;
+}
+.mainBox:hover{
+  transform: scale(0.9);
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(233, 53, 83);
 }
