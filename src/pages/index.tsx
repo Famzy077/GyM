@@ -2,6 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import img from '../../public/images/nav-logo.png'
 import Image from 'next/image'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDashcube } from '@fortawesome/free-brands-svg-icons';
+import { faBottleWater, faBars, faStarOfLife, faPersonSwimming} from '@fortawesome/free-solid-svg-icons';
+
 import 'next/font/google';
 import { useState, useEffect } from 'react';
 const Index: React.FC = () => {
@@ -30,7 +34,7 @@ const Index: React.FC = () => {
       <header className='header flex justify-between py-8 text-white h-[3rem] px-4 place-items-center w-[100%] z-50 bg-gray-800'>
             <div className="logo text-center w-[100%]">
               <Link className='' href="#"><Image src={img} width={130} height={130} alt='logoIcon'></Image></Link>
-              <div><i className="fa-solid fa-bars"></i></div>
+              <div><FontAwesomeIcon icon={faBars} /></div>
             </div>
             <nav className='nav w-[100%]'>
               <ul className='flex justify-start gap-2 text-xl'>
@@ -83,21 +87,28 @@ const Index: React.FC = () => {
         </div>
 
         <div className='sectionBox'>
-            <main className='py-10 px-4 mainBox'>
+            <main className='py-10 px-4 mainBox rounded-lg'>
+              <div><FontAwesomeIcon icon={faDashcube}/></div>
               <h1 className='text-center text-xl font-semibold'>Best Equipment</h1>
               <p className='text-gray-200 text-center text-[19px]'>Consectetur adipiscing elit, sed do eiusmod tempo.</p>
             </main>
-            <main>
-              <h1>Training Plan</h1>
-              <p>Consectetur adipiscing elit, sed do eiusmod tempo.</p>
+
+            <main className='py-10 px-4 mainBox  rounded-lg'>
+              <div><FontAwesomeIcon icon={faStarOfLife}/></div>
+              <h1 className='text-center text-xl font-semibold'>Training Plan</h1>
+              <p className='text-gray-200 text-center text-[19px]'>Consectetur adipiscing elit, sed do eiusmod tempo.</p>
             </main>
-            <main>
-              <h1>Nutrition plan</h1>
-              <p>Consectetur adipiscing elit, sed do eiusmod tempo.</p>
+
+            <main className='py-10 px-4 mainBox rounded-lg'>
+              <div><FontAwesomeIcon icon={faBottleWater}/></div>
+              <h1 className='text-center text-xl font-semibold'>Nutrition plan</h1>
+              <p className='text-gray-200 text-center text-[19px]'>Consectetur adipiscing elit, sed do eiusmod tempo.</p>
             </main>
-            <main>
-              <h1>Swimming poor</h1>
-              <p>Consectetur adipiscing elit, sed do eiusmod tempo.</p>
+
+            <main className='py-10 px-4 mainBox rounded-lg'>
+              <div><FontAwesomeIcon icon={faPersonSwimming} /></div>
+              <h1 className='text-center text-xl font-semibold'>Swimming poor</h1>
+              <p className='text-gray-200 text-center text-[19px]'>Consectetur adipiscing elit, sed do eiusmod tempo.</p>
             </main>
         </div>
       </section>
