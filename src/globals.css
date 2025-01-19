@@ -44,6 +44,9 @@
   top: 0;
   z-index: 100; 
 }
+.nav-icon{
+  display: none;
+}
 
 .scrolling-text {
   white-space: nowrap;
@@ -75,4 +78,14 @@
   transform: scale(0.9);
   transition: all 0.3s ease-in-out;
   background-color: rgb(233, 53, 83);
+}
+.mainBox:hover,  .iconBox{
+  color: white;
+}
+
+@media screen and (width >= 300px) {
+  .nav-icon{
+    display: block;
+    border: 2px solid lime;
+  }
 }

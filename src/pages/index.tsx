@@ -32,9 +32,9 @@ const Index: React.FC = () => {
   return (
     <div>
       <header className='header flex justify-between py-8 text-white h-[3rem] px-4 place-items-center w-[100%] z-50 bg-gray-800'>
-            <div className="logo text-center w-[100%]">
+            <div className="logo text-center w-[100%] flex justify-between">
               <Link className='' href="#"><Image src={img} width={130} height={130} alt='logoIcon'></Image></Link>
-              <div><FontAwesomeIcon icon={faBars} /></div>
+              <div><FontAwesomeIcon className='nav-icon' icon={faBars} /></div>
             </div>
             <nav className='nav w-[100%]'>
               <ul className='flex justify-start gap-2 text-xl'>
@@ -88,28 +88,39 @@ const Index: React.FC = () => {
 
         <div className='sectionBox'>
             <main className='py-10 px-4 mainBox rounded-lg'>
-              <div><FontAwesomeIcon icon={faDashcube}/></div>
-              <h1 className='text-center text-xl font-semibold'>Best Equipment</h1>
+              <div className='text-center'><FontAwesomeIcon className='iconBox text-6xl my-3 text-pink-500'  icon={faDashcube}/></div>
+              <h1 className='text-center text-xl font-semibold my-2'>Best Equipment</h1>
               <p className='text-gray-200 text-center text-[19px]'>Consectetur adipiscing elit, sed do eiusmod tempo.</p>
             </main>
 
             <main className='py-10 px-4 mainBox  rounded-lg'>
-              <div><FontAwesomeIcon icon={faStarOfLife}/></div>
-              <h1 className='text-center text-xl font-semibold'>Training Plan</h1>
+              <div className='text-center'><FontAwesomeIcon className='iconBox text-6xl my-3 text-pink-500' icon={faStarOfLife}/></div>
+              <h1 className='text-center text-xl font-semibold my-2'>Training Plan</h1>
               <p className='text-gray-200 text-center text-[19px]'>Consectetur adipiscing elit, sed do eiusmod tempo.</p>
             </main>
 
             <main className='py-10 px-4 mainBox rounded-lg'>
-              <div><FontAwesomeIcon icon={faBottleWater}/></div>
-              <h1 className='text-center text-xl font-semibold'>Nutrition plan</h1>
+              <div className='text-center'><FontAwesomeIcon className='iconBox text-6xl my-3 text-pink-500'  icon={faBottleWater}/></div>
+              <h1 className='text-center text-xl font-semibold my-2'>Nutrition plan</h1>
               <p className='text-gray-200 text-center text-[19px]'>Consectetur adipiscing elit, sed do eiusmod tempo.</p>
             </main>
 
             <main className='py-10 px-4 mainBox rounded-lg'>
-              <div><FontAwesomeIcon icon={faPersonSwimming} /></div>
-              <h1 className='text-center text-xl font-semibold'>Swimming poor</h1>
+              <div className='text-center' ><FontAwesomeIcon className='iconBox text-6xl my-3 text-pink-500'  icon={faPersonSwimming} /></div>
+              <h1 className='text-center text-xl font-semibold my-2'>Swimming poor</h1>
               <p className='text-gray-200 text-center text-[19px]'>Consectetur adipiscing elit, sed do eiusmod tempo.</p>
             </main>
+        </div>
+      </section>
+
+      <section className='section3 bg-gray-900 flex p-10'>
+        <div className='w-[100%]'>
+          <Image src='https://gym-store.axiomthemes.com/wp-content/uploads/2023/10/img-002-copyright.jpg' width={200} height={200} alt='gym image'></Image>
+        </div>
+        <div className='text-gray-400'>
+          <h1 className='text-5xl font-semibold text-white'>Sport has the power to change the world</h1>
+          <p>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.natus error sit voluptatem accusantium doloremque laudantium. Veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+          <button>About Us</button>
         </div>
       </section>
 
