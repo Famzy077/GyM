@@ -4,17 +4,24 @@ import img from '../../public/images/nav-logo.png'
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDashcube } from '@fortawesome/free-brands-svg-icons';
-import { faBottleWater, faBars, faStarOfLife, faPersonSwimming} from '@fortawesome/free-solid-svg-icons';
+import { faBottleWater, faStarOfLife, faPersonSwimming} from '@fortawesome/free-solid-svg-icons';
 
 import 'next/font/google';
 import { useState, useEffect } from 'react';
 const Index: React.FC = () => {
 
     const [scroll, setScroll] = useState(0);
+    const [isOpen, setIsOpen] = useState(false)
+    const handleNav= () => {
+      setIsOpen(!isOpen);
+    }
     const handleScroll = () => {
       const position = window.scrollY;
       setScroll(position);
     }
+    useEffect(() => {
+      console.log("Nav state changed:", isOpen ? "Open" : "Closed");
+    }, [isOpen])
     useEffect(() => {
       if (scroll > 100) {
         document.querySelector('.header')?.classList.add('bg-gray-900');
@@ -33,8 +40,8 @@ const Index: React.FC = () => {
     <div>
       <header className='header flex justify-between py-8 text-white h-[3rem] px-4 place-items-center w-[100%] z-50 bg-gray-800'>
             <div className="logo text-center w-[100%] flex justify-between">
-              <Link className='' href="#"><Image src={img} width={130} height={130} alt='logoIcon'></Image></Link>
-              <div><FontAwesomeIcon className='nav-icon' icon={faBars} /></div>
+              <Link className='logoImg' href="#"><Image src={img} width={130} height={130} alt='logoIcon'></Image></Link>
+              <div onClick={handleNav} className='text-3xl'>{isOpen ? `✖`: '☰'}</div>
             </div>
             <nav className='nav w-[100%]'>
               <ul className='flex justify-start gap-2 text-xl'>
@@ -45,6 +52,16 @@ const Index: React.FC = () => {
                 <li><Link href='/blog/blog'>FAQs</Link></li>
               </ul>
             </nav>
+            <div className={`miniSreen w-[100%] absolute bg-black top-16 p-10 left-0 h-[50vh] text-center ${isOpen ? 'open' : ''}`}>
+              <div><Link href='/blog/blog'>Home</Link></div>
+              <div><Link href='/blog/blog'>Blog</Link></div>
+              <div><Link href='/blog/blog'>Shop</Link></div>
+              <div><Link href='/blog/blog'>Contact</Link></div>
+              <div><Link href='/blog/blog'>FAQs</Link></div>
+              <div>
+                <button className='bg-blue-gray-400'>Get Started</button>
+              </div>
+            </div>
           </header>
       <section className='mainSection'>
         <main className='mainSectionContent'>
@@ -77,7 +94,7 @@ const Index: React.FC = () => {
         </main>
       </section>
 
-      <section className='section2 text-white p-8 h-[100vh]'>
+      <section className='section2 text-white p-8 h-[fit-content]'>
         <div className='text-center'>
           <h2 className='text-xl font-semibold'>What we offer</h2>
           <h1 className='text-5xl font-bold px-32'>Achieve amazing results <br /> with our services</h1>
@@ -115,7 +132,7 @@ const Index: React.FC = () => {
 
       <section className='section3 bg-gray-900 flex p-10'>
         <div className='w-[100%]'>
-          <Image src='https://gym-store.axiomthemes.com/wp-content/uploads/2023/10/img-002-copyright.jpg' width={200} height={200} alt='gym image'></Image>
+          {/* <Image src='https://gym-store.axiomthemes.com/wp-content/uploads/2023/10/img-002-copyright.jpg' width={200} height={200} alt='gym image'></Image> */}
         </div>
         <div className='text-gray-400'>
           <h1 className='text-5xl font-semibold text-white'>Sport has the power to change the world</h1>
