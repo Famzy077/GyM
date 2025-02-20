@@ -99,6 +99,11 @@
 .mainBox:hover,  .iconBox{
   color: white;
 }
+
+.welcomeGym{
+  display: flex;
+  flex-wrap: wrap;
+}
 .welcomeSection{
   background-image: url('../public/images/coverChain.png');
   -webkit-backdrop-filter: blur(5px);
@@ -106,8 +111,14 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50vh;
-  width: 100%;
+}
+.imgBox{
+  transform: scale(0.9);
+  transition: all 0.6s ease-in-out;
+  opacity: 6;
+}
+.welcomeSection:hover .imgBox{
+  opacity: 0;
 }
 .excise{
   background-image: url('../public/images/wealthCarry.png');
@@ -116,34 +127,17 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 50vh;
-  width: 100%;
+}
+.excise .Image{
+  transform: scale(0.9);
+  transition: all 0.6s ease-in-out;
+  opacity: 6;
+}
+.excise:hover .Image{
+  opacity: 0;
 }
 
-
-
-@media screen and (width >= 300px){
-  .nav-icon{
-    display: block;
-  }
-  .nav{
-    display: none;
-  }
-  .logoImg{
-    margin-top: 10px;
-    width: 80px;
-  }
-  .home_text{
-    font-size: 4.5rem;
-  }
-  .section2 .section1_Box h1{
-    font-family: normal;
-    font-weight: 400;
-    font-size: 23px;
-  }
-}
-
-@media screen and (width > 300px) and (width > 600px){
+@media only screen and (min-width: 300px) and (max-width: 500px) {
   .nav-icon{
     display: block;
   }
@@ -160,11 +154,43 @@
     font-size: 2rem;
   }
 }
-@media screen and (width >= 700px) and (width >= 1000px){
+@media only screen and (min-width: 501px) and (max-width: 780px) {
   .nav-icon{
-    display: none;
+    display: block;
   }
   .nav{
+    display: none;
+  }
+  .section3{
+    flex-wrap: wrap;
+  }
+  .section3 h1{
+    transform: translateX(0);
+    padding: 10px;
+  }
+  .section3 .box p{
+    padding: 0 10px;
+  }
+  .section3 .box button{
+    margin: 0 9.5px;
+  }
+  .welcomeGym{
+    flex-direction: column;
+  }
+  .gymBox{
+    padding: 10px !important;
+    width: 100% !important;
+  }
+  .welcomeSection{
+    width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: 781px) and (max-width: 1080px) {
+  .nav-icon{
     display: block;
+  }
+  .nav{
+    display: none;
   }
 }

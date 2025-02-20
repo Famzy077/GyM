@@ -12,6 +12,13 @@ import GymBoy from '../../public/images/gymBoy.png'
 import Reviews from '../components/FeedBack';
 import ChainImg from '../../public/images/chain.png'
 import Excise from '../../public/images/Excise.png'
+import NikeImg from '../../public/images/nike.png'
+import HellmImg from '../../public/images/Hellm.png'
+import Asics from '../../public/images/asics.png'
+import Befib from '../../public/images/befib.png'
+import Amani from '../../public/images/Amani.png'
+import Reebok from '../../public/images/Reebok.png'
+
 const Index: React.FC = () => {
 
     const [scroll, setScroll] = useState(0);
@@ -137,10 +144,10 @@ const Index: React.FC = () => {
         <div className='w-[100%]'>
           <Image className='w-[100%]' src={GymBoy} alt='gym image'></Image>
         </div>
-        <div className='text-gray-400 md:mt-5 mt-20 w-[100%]'>
+        <div className='box text-gray-400 md:mt-5 mt-20 w-[100%]'>
           <h1 className='text-4xl md:text-5xl font-semibold text-white md:translate-x-[-7rem] md:leading-snug'>Sport has the power to change the world</h1>
-          <p className='md:px-[4rem] md:leading-relaxed'>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.natus error sit voluptatem accusantium doloremque laudantium. Veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
-          <button className='md:mx-[4rem] mt-6 bg-red-400 p-4 px-8 text-white font-semibold'>About Us</button>
+          <p className='px-0 md:px-[4rem] md:leading-relaxed'>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.natus error sit voluptatem accusantium doloremque laudantium. Veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+          <button className='mx-0 md:mx-[4rem] mt-6 bg-red-400 p-4 px-8 text-white font-semibold'>About Us</button>
         </div>
       </section>
 
@@ -164,19 +171,42 @@ const Index: React.FC = () => {
         </div>
       </section>
 
-      <main className='md:flex'>
-        <div className='welcomeSection w-[100%] border-2'>
-          <Image src={ChainImg} alt='chain-Image'/>
+      <main className='welcomeGym py-20 bg-gray-900 gap-10 px-10'>
+        <div className='welcomeSection w-[100%] md:w-[40%] h-[fit-content] md:h-[80vh]'>
+          <Image className='imgBox border border-red-500 h-[fit-content] w-[100%] md:h-[80vh]' src={ChainImg} alt='chain-Image'/>
         </div>
-        <div className='w-[100%]'>
-          <h3>welcome to the gym</h3>
-          <h1>Forge your fitness: gym and crossfit adventures</h1>
-          <p>Adipiscing elit, sed do eiusmod tempor incididunt labore dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
-          <div className='excise'>
-              <Image src={Excise} alt='Excise-Image'/>
+        <div className='gymBox w-[fit-content] md:w-[50%]'>
+          <div className='md:pr-[13rem] mb-5 md:mb-40'>
+            <h3 className='text-white text-xl'>welcome to the gym</h3>
+            <h1 className='text-3xl md:text-5xl text-white font-semibold md:leading-[3rem]'>Forge your fitness: gym and crossfit adventures</h1>
+            <p className='text-gray-500 md:leading-snug pt-2 text-[19px]'>Adipiscing elit, sed do eiusmod tempor incididunt labore dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+          </div>
+          <div className='excise w-[100%] h-[fit-content] md:h-[60vh]'>
+            <Image className='Image border border-red-500 h-[fit-content] md:h-[60vh]' src={Excise} alt='Excise-Image'/>
           </div>
         </div>
       </main>
+
+      <div className='bg-gray-900 justify-center gap-5 flex'>
+        <div className='object-cover brightness-50 hover:brightness-100 transition duration-300'>
+          <Image src={Asics}  alt='brand-logo'></Image>
+        </div>
+        <div className='object-cover brightness-50 hover:brightness-100 transition duration-300'>
+          <Image src={NikeImg} alt='brand-logo'></Image>
+        </div>
+        <div className='object-cover brightness-50 hover:brightness-100 transition duration-300'>
+          <Image src={Befib} alt='brand-logo'></Image>
+        </div>
+        <div className='object-cover brightness-50 hover:brightness-100 transition duration-300'>
+          <Image src={Amani} alt='brand-logo'></Image>
+        </div>
+        <div className='object-cover brightness-50 hover:brightness-100 transition duration-300'>
+          <Image src={HellmImg} alt='brand-logo'></Image>
+        </div>
+        <div className='object-cover brightness-50 hover:brightness-100 transition duration-300'>
+          <Image src={Reebok} alt='brand-logo'></Image>
+        </div>
+      </div>
     </div>
 
   );
