@@ -1,0 +1,9 @@
+.toggleColor.open{
+    color: red;
+    background-color: white;
+    padding: 4px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    place-content: center;
+}

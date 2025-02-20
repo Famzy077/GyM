@@ -43,7 +43,7 @@ const PostForm: React.FC<PostFormProps> = ({ addPost }) => {
           required 
         />
       </div>
-      <div>
+      <div>/
         <label>Image URL:</label>
         <input 
           type="text" 

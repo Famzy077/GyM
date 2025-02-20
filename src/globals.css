@@ -26,7 +26,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-position-y: -10px;
   height: 100vh;
   width: 100%;
 }
@@ -36,8 +35,6 @@
 }
 .header{
   position: -webkit-sticky;
-  /* position: fixed;
-  top: 0; */
   width: 100%;
   z-index: 1000;
   position: sticky;
@@ -53,9 +50,18 @@
   transform: translateY(-122%);
   transition: transform 0.5s ease-in-out;
 }
-
+.handleNav.open{
+  color: red;
+}
 .miniSreen.open {
   transform: translateY(0);
+}
+
+.arror_icon .text_nav:hover{
+  color: white;
+}
+.text_nav .arror_icon:hover{
+  color: white;
 }
 
 .scrolling-text {
@@ -65,14 +71,7 @@
   transition: 2s ease-in-out;
   overflow: hidden;
 }
-/* @keyframes nav_animate{
-    0%{
-      transform: translateY(40%);
-    }
-    50%{
-      transform: translateY(80%);
-    }
-} */
+
 @keyframes marquee {
   0% {
     transform: translate(0, 0);
@@ -100,8 +99,30 @@
 .mainBox:hover,  .iconBox{
   color: white;
 }
+.welcomeSection{
+  background-image: url('../public/images/coverChain.png');
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  width: 100%;
+}
+.excise{
+  background-image: url('../public/images/wealthCarry.png');
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  width: 100%;
+}
 
-@media (width <= 500px) {
+
+
+@media screen and (width >= 300px){
   .nav-icon{
     display: block;
   }
@@ -111,5 +132,39 @@
   .logoImg{
     margin-top: 10px;
     width: 80px;
+  }
+  .home_text{
+    font-size: 4.5rem;
+  }
+  .section2 .section1_Box h1{
+    font-family: normal;
+    font-weight: 400;
+    font-size: 23px;
+  }
+}
+
+@media screen and (width > 300px) and (width > 600px){
+  .nav-icon{
+    display: block;
+  }
+  .nav{
+    display: none;
+  }
+  .logoImg{
+    margin-top: 10px;
+    width: 80px;
+  }
+  .home_text{
+    font-size: 4.5rem;
+  }.section2 .section1_Box h1{
+    font-size: 2rem;
+  }
+}
+@media screen and (width >= 700px) and (width >= 1000px){
+  .nav-icon{
+    display: none;
+  }
+  .nav{
+    display: block;
   }
 }

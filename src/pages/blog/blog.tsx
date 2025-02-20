@@ -4,13 +4,14 @@ import PostList from '../../components/PostList';
 import { Post } from '../../types/Post';
 import { supabase } from '../../utils/supabaseClient';
 import Image from 'next/image';
+import img from '../../../public/images/nav-logo.png'
 import Link from 'next/link';
 
 const Blog: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);
-  const []
+  const [isOpen, setIsOpen] = useState(false)
   const handleNav = () => {
-
+    setIsOpen(!isOpen)
   }
   // Fetch posts from Supabase on page load
   useEffect(() => {

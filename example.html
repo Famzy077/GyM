@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+</head>
+<style>
+    main{
+        height: 97vh;
+        display: flex;
+        justify-content: space-around;
+        place-items: center;
+    }
+    .box{
+        height: 40vh;
+        border: 1px solid black;
+        width: 100%;
+        text-align: center;
+        place-content: center;
+        border-radius: 9px;
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box p{
+        background-color: rgb(190, 190, 190);
+        padding: 50px;
+        border-radius: 5px;
+        transition: 1s;
+        transform: translateY(30%) rotate(30deg);
+    }
+    .box p:hover{
+        transform: translateY(0) rotate(0);
+    }
+</style>
+<body>
+    <main>
+        <div class="box">
+            <p>Box 1</p>
+        </div>
+        <div class="box">
+            <p>Box 2</p>
+        </div>
+        <div class="box">
+            <p>Box 3</p>
+        </div>
+    </main>
+</body>
+</html>
