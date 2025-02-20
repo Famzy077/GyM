@@ -208,9 +208,15 @@ const Index: React.FC = () => {
         </div>
       </div>
       <main>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div>
+          <h1>$18 </h1>
+        </div>
+        <div>
+          <h1>$21</h1>
+        </div>
+        <div>
+          <h1>$25</h1>
+        </div>
       </main>
     </div>
 
