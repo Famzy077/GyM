@@ -146,7 +146,7 @@ const Index: React.FC = () => {
         </div>
         <div className='box text-gray-400 md:mt-5 mt-20 w-[100%]'>
           <h1 className='text-4xl md:text-5xl font-semibold text-white md:translate-x-[-7rem] md:leading-snug'>Sport has the power to change the world</h1>
-          <p className='px-0 md:px-[4rem] md:leading-relaxed'>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.natus error sit voluptatem accusantium doloremque laudantium. Veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+          <p className='px-0 md:px-[4rem] md:leading-relaxed'>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam.natus error sit voluptatem accusantium doloremque laudantium. Veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
           <button className='mx-0 md:mx-[4rem] mt-6 bg-red-400 p-4 px-8 text-white font-semibold'>About Us</button>
         </div>
       </section>
@@ -207,6 +207,11 @@ const Index: React.FC = () => {
           <Image src={Reebok} alt='brand-logo'></Image>
         </div>
       </div>
+      <main>
+        <div></div>
+        <div></div>
+        <div></div>
+      </main>
     </div>
 
   );
