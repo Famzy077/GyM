@@ -36,7 +36,6 @@
   height: 100vh;
 }
 .header{
-  position: -webkit-sticky;
   width: 100%;
   z-index: 1000;
   position: sticky;
@@ -184,7 +183,6 @@
     top: -9px;
   }
   .logoImg{
-    margin-top: 10px;
     width: 80px;
   }
   .getbtn{
@@ -217,6 +215,10 @@
   }
   .getbtn{
     display: none;
+  }
+  .home_text{
+    font-size: 3.5rem;
+    line-height: 3.5rem !important;
   }
   .section3{
     flex-wrap: wrap;

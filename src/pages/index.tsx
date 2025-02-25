@@ -57,8 +57,8 @@ const Index: React.FC = () => {
     }, [scroll]);
   return (
     <div className=''>
-      <header className='header flex  justify-between py-8 text-white h-[3rem] px-4 place-items-center w-[100%] z-50 bg-gray-800'>
-          <div className="logo text-center w-[100%] flex justify-between">
+      <header className='header flex justify-between py-8 text-white h-[3rem] px-4 place-items-center w-[100%] z-50 bg-gray-800'>
+          <div className="logo text-center w-[100%] flex justify-between items-center">
             <Link className='logoImg' href="#"><Image src={img} width={130} height={130} alt='logoIcon'></Image></Link>
             <div onClick={handleNav} className={`nav-icon text-3xl cursor-pointer ${style.toggleColor} ${isOpen ? style.open : ''}`}>{isOpen ? `✖`: '☰'}</div>
           </div>
@@ -224,7 +224,11 @@ const Index: React.FC = () => {
       <div>
         <Pricing/>
       </div>
-      <div className='text-white bg-gray-900 flex'><Blog/></div>
+
+      <div className='text-white bg-gray-900 flex'>
+        <Blog/>
+      </div>
+
       <footer className='bg-gray-800'>
         <Footer/>
         <p className='text-white font-semibold text-center my-3'>© Copy right {date}, Famzy all right reserved</p>
