@@ -57,31 +57,34 @@ const Index: React.FC = () => {
     }, [scroll]);
   return (
     <div className=''>
-      <header className='header flex justify-between py-8 text-white h-[3rem] px-4 place-items-center w-[100%] z-50 bg-gray-800'>
-            <div className="logo text-center w-[100%] flex justify-between">
-              <Link className='logoImg' href="#"><Image src={img} width={130} height={130} alt='logoIcon'></Image></Link>
-              <div onClick={handleNav} className={`nav-icon text-3xl cursor-pointer ${style.toggleColor} ${isOpen ? style.open : ''}`}>{isOpen ? `✖`: '☰'}</div>
+      <header className='header flex  justify-between py-8 text-white h-[3rem] px-4 place-items-center w-[100%] z-50 bg-gray-800'>
+          <div className="logo text-center w-[100%] flex justify-between">
+            <Link className='logoImg' href="#"><Image src={img} width={130} height={130} alt='logoIcon'></Image></Link>
+            <div onClick={handleNav} className={`nav-icon text-3xl cursor-pointer ${style.toggleColor} ${isOpen ? style.open : ''}`}>{isOpen ? `✖`: '☰'}</div>
+          </div>
+          <nav className='nav w-[100%]'>
+            <ul className='flex justify-start gap-2 text-xl'>
+              <li><Link href='/blog/blog'>Home</Link></li>
+              <li><Link href='/'>Blog</Link></li>
+              <li><Link href='/'>Shop</Link></li>
+              <li><Link href='/blog/blog'>Contact</Link></li>
+              <li><Link href='/blog/blog'>FAQs</Link></li>
+            </ul>
+          </nav>
+          <div className='w-[100%] getbtn flex justify-center'>
+            <button className='bg-red-600 hover:bg-red-800 text-white text-xl my-1 py-1 px-2 rounded-[5px] place-content-center'><Link href="/#">Get Started</Link></button>
+          </div>
+          <div className={`miniSreen w-[100%] absolute bg-black top-16 p-10 left-0 h-[50vh] place-content-center ${isOpen ? 'open' : ''}`}>
+            <div onClick={clickOff} className='hover:text-white hover:translate-x-2'><Link href='/blog/blog' className='font-semibold text-2xl text_nav'>Home </Link><FontAwesomeIcon className='ml-7 cursor-pointer arror_icon font-semibold text-2xl'  icon={faArrowRight} /></div>
+            <div onClick={clickOff} className='hover:text-white hover:translate-x-2'><Link href='/blog/blog' className='font-semibold text-2xl mr-8 text-gray-400 hover:text-white text_nav'>Blog </Link><FontAwesomeIcon className='ml-7 cursor-pointer font-semibold text-2xl arror_icon text-gray-400 hover:text-white' icon={faArrowRight} /></div>
+            <div onClick={clickOff} className='hover:text-white hover:translate-x-2'><Link href='/blog/blog' className='font-semibold text-2xl mr-8 text-gray-400 hover:text-white text_nav'>Shop </Link><FontAwesomeIcon className='ml-7 font-semibold text-2xl cursor-pointer arror_icon text-gray-400 hover:text-white'  icon={faArrowRight} /></div>
+            <div onClick={clickOff} className='hover:text-white hover:translate-x-2'><Link href='/blog/blog' className='font-semibold text-2xl mr-8 text-gray-400 transition-all translate-x-2 hover:text-white text_nav'>Contact </Link><FontAwesomeIcon className='ml-7 font-semibold text-2xl cursor-pointer arror_icon text-gray-400 hover:text-white'  icon={faArrowRight} /></div>
+            <div onClick={clickOff} className='hover:text-white hover:translate-x-2'><Link href='/blog/blog' className='font-semibold transition-all text-2xl mr-8 text-gray-400 hover:text-white text_nav'>FAQs </Link><FontAwesomeIcon className='ml-7 font-semibold text-2xl cursor-pointer arror_icon text-gray-400 hover:text-white'  icon={faArrowRight} /></div>
+            <div>
+              <button className='bg-red-600 hover:bg-red-800 text-white text-2xl my-3 py-2 px-4 rounded-xl place-content-center'><Link href="/#">Get Started</Link></button>
             </div>
-            <nav className='nav w-[100%]'>
-              <ul className='flex justify-start gap-2 text-xl'>
-                <li><Link href='/blog/blog'>Home</Link></li>
-                <li><Link href='/'>Blog</Link></li>
-                <li><Link href='/'>Shop</Link></li>
-                <li><Link href='/blog/blog'>Contact</Link></li>
-                <li><Link href='/blog/blog'>FAQs</Link></li>
-              </ul>
-            </nav>
-            <div className={`miniSreen w-[100%] absolute bg-black top-16 p-10 left-0 h-[50vh] place-content-center ${isOpen ? 'open' : ''}`}>
-              <div onClick={clickOff} className='hover:text-white hover:translate-x-2'><Link href='/blog/blog' className='font-semibold text-2xl text_nav'>Home </Link><FontAwesomeIcon className='ml-7 cursor-pointer arror_icon font-semibold text-2xl'  icon={faArrowRight} /></div>
-              <div onClick={clickOff} className='hover:text-white hover:translate-x-2'><Link href='/blog/blog' className='font-semibold text-2xl mr-8 text-gray-400 hover:text-white text_nav'>Blog </Link><FontAwesomeIcon className='ml-7 cursor-pointer font-semibold text-2xl arror_icon text-gray-400 hover:text-white' icon={faArrowRight} /></div>
-              <div onClick={clickOff} className='hover:text-white hover:translate-x-2'><Link href='/blog/blog' className='font-semibold text-2xl mr-8 text-gray-400 hover:text-white text_nav'>Shop </Link><FontAwesomeIcon className='ml-7 font-semibold text-2xl cursor-pointer arror_icon text-gray-400 hover:text-white'  icon={faArrowRight} /></div>
-              <div onClick={clickOff} className='hover:text-white hover:translate-x-2'><Link href='/blog/blog' className='font-semibold text-2xl mr-8 text-gray-400 transition-all translate-x-2 hover:text-white text_nav'>Contact </Link><FontAwesomeIcon className='ml-7 font-semibold text-2xl cursor-pointer arror_icon text-gray-400 hover:text-white'  icon={faArrowRight} /></div>
-              <div onClick={clickOff} className='hover:text-white hover:translate-x-2'><Link href='/blog/blog' className='font-semibold transition-all text-2xl mr-8 text-gray-400 hover:text-white text_nav'>FAQs </Link><FontAwesomeIcon className='ml-7 font-semibold text-2xl cursor-pointer arror_icon text-gray-400 hover:text-white'  icon={faArrowRight} /></div>
-              <div>
-                <button className='bg-red-600 hover:bg-red-800 text-white text-2xl my-3 py-2 px-4 rounded-xl place-content-center'><Link href="/#">Get Started</Link></button>
-              </div>
-            </div>
-          </header>
+          </div>
+        </header>
       <section className='mainSection'>
         <main className='mainSectionContent'>
 
