@@ -26,6 +26,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  --tw-brightness: brightness(.7);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   height: 100vh;
   width: 100%;
 }
@@ -38,7 +40,7 @@
   width: 100%;
   z-index: 1000;
   position: sticky;
-  top: 0;
+  top: -5px;
   z-index: 100; 
 }
 
@@ -47,7 +49,7 @@
 }
 
 .miniSreen {
-  transform: translateY(-122%);
+  transform: translateY(-148%);
   transition: transform 0.5s ease-in-out;
 }
 .handleNav.open{
@@ -136,6 +138,40 @@
 .excise:hover .Image{
   opacity: 0;
 }
+.pricing{  
+  background-color: rgb(43, 43, 43);
+}
+.pricingBox{
+  background-color: rgb(46, 46, 59)!important;
+}
+.pricingBox h2{
+  animation-name: change;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.cardBox{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+@keyframes change {
+  20%{
+    color: gold !important;
+  }
+  40%{
+    color: rgb(0, 255, 55) !important;
+  }
+  70%{
+    color: rgb(255, 136, 0) !important;
+  }
+  90%{
+    color: rgb(255, 51, 0) !important;
+  }
+  
+}
+.footer{
+  display: flex;
+}
 
 @media only screen and (min-width: 300px) and (max-width: 500px) {
   .nav-icon{
@@ -144,14 +180,29 @@
   .nav{
     display: none;
   }
+  .header{
+    top: -9px;
+  }
   .logoImg{
     margin-top: 10px;
     width: 80px;
   }
   .home_text{
-    font-size: 4.5rem;
-  }.section2 .section1_Box h1{
+    font-size: 3.5rem;
+    line-height: 3.5rem !important;
+  }
+  .section2 .section1_Box h1{
     font-size: 2rem;
+  }
+  .sectionBox{
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  }
+  .cardBox{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  }
+  .footer{
+    flex-direction: column;
   }
 }
 @media only screen and (min-width: 501px) and (max-width: 780px) {
@@ -183,6 +234,9 @@
   }
   .welcomeSection{
     width: 100% !important;
+  }
+  .footer{
+    flex-direction: column;
   }
 }
 

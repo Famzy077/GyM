@@ -31,7 +31,7 @@ const reviews = [
 
  const Reviews = () => {
   const [currentReview, setCurrentReview] = useState(0);
-     // Automatically move to the next review after 3 seconds
+     // Automatically move to the next review after 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentReview((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));

@@ -18,6 +18,11 @@ import Asics from '../../public/images/asics.png'
 import Befib from '../../public/images/befib.png'
 import Amani from '../../public/images/Amani.png'
 import Reebok from '../../public/images/Reebok.png'
+import Pricing from '@/components/Pricing';
+import Blog from '@/components/Blog';
+import Footer from '@/components/Footer';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Index: React.FC = () => {
 
@@ -25,6 +30,9 @@ const Index: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false)
     const handleNav= () => {
       setIsOpen(!isOpen);
+    }
+    const clickOff = () => {
+      setIsOpen(!isOpen)
     }
     const handleScroll = () => {
       const position = window.scrollY;
@@ -63,14 +71,14 @@ const Index: React.FC = () => {
                 <li><Link href='/blog/blog'>FAQs</Link></li>
               </ul>
             </nav>
-            <div className={`miniSreen w-[100%] absolute bg-black top-16 p-10 left-0 h-[50vh] ${isOpen ? 'open' : ''}`}>
-              <div><Link href='/blog/blog' className='font-semibold text-2xl text_nav'>Home </Link><FontAwesomeIcon className='ml-7 cursor-pointer arror_icon font-semibold text-2xl'  icon={faArrowRight} /></div>
-              <div><Link href='/blog/blog' className='font-semibold text-2xl mr-8 text-gray-400 text_nav'>Blog </Link><FontAwesomeIcon className='ml-7 cursor-pointer font-semibold text-2xl arror_icon text-gray-400' icon={faArrowRight} /></div>
-              <div><Link href='/blog/blog' className='font-semibold text-2xl mr-8 text-gray-400 text_nav'>Shop </Link><FontAwesomeIcon className='ml-7 font-semibold text-2xl cursor-pointer arror_icon text-gray-400'  icon={faArrowRight} /></div>
-              <div><Link href='/blog/blog' className='font-semibold text-2xl mr-8 text-gray-400 text_nav'>COntact </Link><FontAwesomeIcon className='ml-7 font-semibold text-2xl cursor-pointer arror_icon text-gray-400'  icon={faArrowRight} /></div>
-              <div><Link href='/blog/blog' className='font-semibold text-2xl mr-8 text-gray-400 text_nav'>FAQs </Link><FontAwesomeIcon className='ml-7 font-semibold text-2xl cursor-pointer arror_icon text-gray-400'  icon={faArrowRight} /></div>
+            <div className={`miniSreen w-[100%] absolute bg-black top-16 p-10 left-0 h-[50vh] place-content-center ${isOpen ? 'open' : ''}`}>
+              <div onClick={clickOff} className='hover:text-white hover:translate-x-2'><Link href='/blog/blog' className='font-semibold text-2xl text_nav'>Home </Link><FontAwesomeIcon className='ml-7 cursor-pointer arror_icon font-semibold text-2xl'  icon={faArrowRight} /></div>
+              <div onClick={clickOff} className='hover:text-white hover:translate-x-2'><Link href='/blog/blog' className='font-semibold text-2xl mr-8 text-gray-400 hover:text-white text_nav'>Blog </Link><FontAwesomeIcon className='ml-7 cursor-pointer font-semibold text-2xl arror_icon text-gray-400 hover:text-white' icon={faArrowRight} /></div>
+              <div onClick={clickOff} className='hover:text-white hover:translate-x-2'><Link href='/blog/blog' className='font-semibold text-2xl mr-8 text-gray-400 hover:text-white text_nav'>Shop </Link><FontAwesomeIcon className='ml-7 font-semibold text-2xl cursor-pointer arror_icon text-gray-400 hover:text-white'  icon={faArrowRight} /></div>
+              <div onClick={clickOff} className='hover:text-white hover:translate-x-2'><Link href='/blog/blog' className='font-semibold text-2xl mr-8 text-gray-400 transition-all translate-x-2 hover:text-white text_nav'>Contact </Link><FontAwesomeIcon className='ml-7 font-semibold text-2xl cursor-pointer arror_icon text-gray-400 hover:text-white'  icon={faArrowRight} /></div>
+              <div onClick={clickOff} className='hover:text-white hover:translate-x-2'><Link href='/blog/blog' className='font-semibold transition-all text-2xl mr-8 text-gray-400 hover:text-white text_nav'>FAQs </Link><FontAwesomeIcon className='ml-7 font-semibold text-2xl cursor-pointer arror_icon text-gray-400 hover:text-white'  icon={faArrowRight} /></div>
               <div>
-                <button className='bg-blue-gray-400 text-gray-400'>Get Started</button>
+                <button className='bg-red-600 hover:bg-red-800 text-white text-2xl my-3 py-2 px-4 rounded-xl place-content-center'><Link href="/#">Get Started</Link></button>
               </div>
             </div>
           </header>
@@ -78,7 +86,7 @@ const Index: React.FC = () => {
         <main className='mainSectionContent'>
 
           <div className='pt-[60px] h-[90vh] flex place-items-center'>
-            <main className='leading-[6rem] text-[7rem] font-extrabold'>
+            <main className='leading-[6rem] text-4xl md:text-[7rem] font-extrabold'>
               <h1 className='text-start mx-16 home_text  text-white w-[50%] font-bold'>Ultimate</h1>
               <h1 className='text-start mx-16 home_text font-semibold text-white w-[50%]'>Crossfit</h1>
               <h1 className='text-start home_text mx-16 font-semibold text-white w-[50%]'> Facility</h1>
@@ -104,9 +112,9 @@ const Index: React.FC = () => {
         </main>
       </section>
 
-      <section className='section2 text-white p-8 h-[fit-content]'>
+      <section className='section2 text-white sm:px-2 md:p-8 h-[fit-content]'>
         <div className='text-center section1_Box'>
-          <h2 className='text-xl font-semibold'>What we offer</h2>
+          <h2 className='text-xl font-semibold my-3 mt-9'>What we offer</h2>
           <h1 className='text-5xl font-bold px-'>Achieve amazing results <br /> with our services</h1>
           <div className='place-content-center flex'>
             <Image className='text-center rounded-xl p-1 bg-white h-[40px] w-[40px] m-2' src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2225%22%20height%3D%2215%22%20viewBox%3D%220%200%2025%2015%22%3E%3Ctext%20transform%3D%22translate(0%2015)%20rotate(-90)%22%20font-size%3D%2229px%22%20font-family%3D%22PlayfairDisplay-Regular%2C%20Playfair%20Display%22%3E%3Ctspan%20x%3D%220%22%20y%3D%2220%22%3E%C2%AB%3C%2Ftspan%3E%3C%2Ftext%3E%3C%2Fsvg%3E' alt='image' width={70} height={70}></Image>
@@ -146,8 +154,8 @@ const Index: React.FC = () => {
         </div>
         <div className='box text-gray-400 md:mt-5 mt-20 w-[100%]'>
           <h1 className='text-4xl md:text-5xl font-semibold text-white md:translate-x-[-7rem] md:leading-snug'>Sport has the power to change the world</h1>
-          <p className='px-0 md:px-[4rem] md:leading-relaxed'>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam.natus error sit voluptatem accusantium doloremque laudantium. Veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
-          <button className='mx-0 md:mx-[4rem] mt-6 bg-red-400 p-4 px-8 text-white font-semibold'>About Us</button>
+          <p className='px-0 md:px-[4rem] md:leading-relaxed mt-4'>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim  veniam.natus error sit voluptatem accusantium doloremque laudantium. Veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas.</p>
+          <button className='hover:bg-red-800 mx-0 md:mx-[4rem] mt-6 bg-red-600 p-4 px-8 text-white font-semibold'>About Us</button>
         </div>
       </section>
 
@@ -171,55 +179,55 @@ const Index: React.FC = () => {
         </div>
       </section>
 
-      <main className='welcomeGym py-20 bg-gray-900 gap-10 px-10'>
-        <div className='welcomeSection w-[100%] md:w-[40%] h-[fit-content] md:h-[80vh]'>
-          <Image className='imgBox border border-red-500 h-[fit-content] w-[100%] md:h-[80vh]' src={ChainImg} alt='chain-Image'/>
-        </div>
-        <div className='gymBox w-[fit-content] md:w-[50%]'>
-          <div className='md:pr-[13rem] mb-5 md:mb-40'>
-            <h3 className='text-white text-xl'>welcome to the gym</h3>
-            <h1 className='text-3xl md:text-5xl text-white font-semibold md:leading-[3rem]'>Forge your fitness: gym and crossfit adventures</h1>
-            <p className='text-gray-500 md:leading-snug pt-2 text-[19px]'>Adipiscing elit, sed do eiusmod tempor incididunt labore dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+      <section>
+        <main className='welcomeGym py-20 bg-gray-900 gap-10 px-10'>
+          <div className='welcomeSection w-[100%] md:w-[40%] h-[fit-content] md:h-[80vh]'>
+            <Image className='imgBox border border-red-500 h-[fit-content] w-[100%] md:h-[80vh]' src={ChainImg} alt='chain-Image'/>
           </div>
-          <div className='excise w-[100%] h-[fit-content] md:h-[60vh]'>
-            <Image className='Image border border-red-500 h-[fit-content] md:h-[60vh]' src={Excise} alt='Excise-Image'/>
+          <div className='gymBox w-[fit-content] md:w-[50%]'>
+            <div className='md:pr-[13rem] mb-5 md:mb-40'>
+              <h3 className='text-white text-2xl'>welcome to the gym</h3>
+              <h1 className='text-3xl md:text-5xl text-white font-semibold md:leading-[3rem]'>Forge your fitness: gym and crossfit adventures</h1>
+              <p className='text-gray-500 md:leading-snug pt-2 text-[19px]'>Adipiscing elit, sed do eiusmod tempor incididunt labore dolore magna aliqua. Ut enim ad minim veniam, quis.</p>
+            </div>
+            <div className='excise w-[100%] h-[fit-content] md:h-[60vh]'>
+              <Image className='Image border border-red-500 h-[fit-content] md:h-[60vh]' src={Excise} alt='Excise-Image'/>
+            </div>
           </div>
-        </div>
-      </main>
+        </main>
 
-      <div className='bg-gray-900 justify-center gap-5 flex'>
-        <div className='object-cover brightness-50 hover:brightness-100 transition duration-300'>
-          <Image src={Asics}  alt='brand-logo'></Image>
+        <div className='bg-gray-900 justify-center py-10 gap-1 p-4 md:gap-5 flex'>
+          <div className='object-cover brightness-50 hover:brightness-100 transition duration-300'>
+            <Image src={Asics}  alt='brand-logo'></Image>
+          </div>
+          <div className='object-cover brightness-50 hover:brightness-100 transition duration-300'>
+            <Image src={NikeImg} alt='brand-logo'></Image>
+          </div>
+          <div className='object-cover brightness-50 hover:brightness-100 transition duration-300'>
+            <Image src={Befib} alt='brand-logo'></Image>
+          </div>
+          <div className='object-cover brightness-50 hover:brightness-100 transition duration-300'>
+            <Image src={Amani} alt='brand-logo'></Image>
+          </div>
+          <div className='object-cover brightness-50 hover:brightness-100 transition duration-300'>
+            <Image src={HellmImg} alt='brand-logo'></Image>
+          </div>
+          <div className='object-cover brightness-50 hover:brightness-100 transition duration-300'>
+            <Image src={Reebok} alt='brand-logo'></Image>
+          </div>
         </div>
-        <div className='object-cover brightness-50 hover:brightness-100 transition duration-300'>
-          <Image src={NikeImg} alt='brand-logo'></Image>
-        </div>
-        <div className='object-cover brightness-50 hover:brightness-100 transition duration-300'>
-          <Image src={Befib} alt='brand-logo'></Image>
-        </div>
-        <div className='object-cover brightness-50 hover:brightness-100 transition duration-300'>
-          <Image src={Amani} alt='brand-logo'></Image>
-        </div>
-        <div className='object-cover brightness-50 hover:brightness-100 transition duration-300'>
-          <Image src={HellmImg} alt='brand-logo'></Image>
-        </div>
-        <div className='object-cover brightness-50 hover:brightness-100 transition duration-300'>
-          <Image src={Reebok} alt='brand-logo'></Image>
-        </div>
+      </section>
+      
+      <div>
+        <Pricing/>
       </div>
-      <main>
-        <div>
-          <h1>$18 </h1>
-        </div>
-        <div>
-          <h1>$21</h1>
-        </div>
-        <div>
-          <h1>$25</h1>
-        </div>
-      </main>
+      <div className='text-white bg-gray-900 flex'><Blog/></div>
+      <footer className='bg-gray-800'>
+        <Footer/>
+        <p className='text-white font-semibold text-center my-3'>© Copy right {date}, Famzy all right reserved</p>
+      </footer>
     </div>
-
   );
 }
 export default Index;
+const date = new Date().getFullYear()
